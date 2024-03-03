@@ -1,0 +1,19 @@
+/* Define styles for the header component */
+.header {
+  background-color: #437cba; /* Set background color */
+  padding: 10px 0; /* Add padding for top and bottom */
+  text-align: center; /* Align text to the center */
+}
+
+.header li {
+  display: inline-block;
+  margin: 0 20px; /* Add margin to separate list items */
+  font-size: 18px; /* Set font size */
+  color: white; /* Set text color */
+  cursor: pointer; /* Set cursor to pointer */
+  list-style: none;
+}
+
+.header li:hover {
+  color: beige;
+}

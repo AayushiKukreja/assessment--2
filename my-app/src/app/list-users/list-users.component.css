@@ -1,0 +1,30 @@
+/* Define styles for the container */
+.container {
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  margin: 20px 0; /* Add margin */
+}
+
+/* Define styles for the user item */
+.user-item {
+  margin-bottom: 10px; /* Add margin */
+  padding: 10px; /* Add padding */
+  background-color: #f4f4f4; /* Add background color */
+  border-radius: 4px; /* Add border radius */
+}
+
+/* Define styles for the user properties */
+.user-property {
+  font-weight: bold; /* Add font weight */
+  margin-right: 10px; /* Add margin */
+}
+
+/* Define styles for the user values */
+.user-value {
+  margin-bottom: 10px; /* Add margin */
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+}

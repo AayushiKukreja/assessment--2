@@ -1,0 +1,39 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+    <div class="form-group">
+      <label for="name">Enter Name:</label>
+      <input type="text" name="name" ngModel required />
+    </div>
+
+    <div class="form-group">
+      <label for="age">Enter Age:</label>
+      <input type="number" name="age" ngModel required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Enter Email:</label>
+      <input
+        type="email"
+        name="email"
+        email
+        ngModel
+        #email="ngModel"
+        required
+      />
+    </div>
+
+    <p *ngIf="!email.valid && email.touched">
+      Incorrect Email , please correct it
+    </p>
+
+    <div class="form-group">
+      <label for="status">Select Status:</label>
+      <select name="status" id="status" ngModel required>
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!f.valid">Submit</button>
+  </form>
+</div>

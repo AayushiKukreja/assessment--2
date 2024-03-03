@@ -1,0 +1,24 @@
+<div *ngIf="users.length == 0">
+  <p>No users to be displayed!!</p>
+</div>
+
+<div *ngIf="users">
+  <div *ngFor="let user of users" class="user-item container">
+    <div class="user-property">Name:</div>
+    <div class="user-value">{{ user.name }}</div>
+
+    <div class="user-property">Age:</div>
+    <div class="user-value">{{ user.age }}</div>
+
+    <div class="user-property">Email:</div>
+    <div class="user-value">{{ user.email }}</div>
+
+    <div class="user-property">Status:</div>
+    <div class="user-value">{{ user.status }}</div>
+
+    <div class="buttons">
+      <button (click)="editUser(user.id)">Edit</button>
+      <button (click)="deleteUser(user.id)">Delete</button>
+    </div>
+  </div>
+</div>

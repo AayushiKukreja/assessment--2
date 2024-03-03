@@ -1,0 +1,29 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+      <label for="name">Enter Name:</label>
+      <input type="text" name="name" formControlName="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="age">Enter Age:</label>
+      <input type="number" name="age" formControlName="age" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Enter Email:</label>
+      <input type="email" name="email" formControlName="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="status">Select Status:</label>
+      <select name="status" id="status" formControlName="status">
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+      </select>
+    </div>
+
+    <button type="submit">Update</button>
+    <button routerLink="/list">Back</button>
+  </form>
+</div>

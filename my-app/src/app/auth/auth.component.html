@@ -1,0 +1,49 @@
+<div class="error-container" *ngIf="error">
+  <div class="error-message">{{ error }}</div>
+</div>
+<div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+
+<div class="container">
+  <h2>Login</h2>
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        ngModel
+        #email="ngModel"
+        required
+        email
+      />
+    </div>
+    <p *ngIf="!email.valid && email.touched">Invalid email!!</p>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        name="password"
+        #password="ngModel"
+        ngModel
+        required
+      />
+    </div>
+    <button
+      [ngClass]="{ 'btn-disabled': !authForm.valid }"
+      [disabled]="!authForm.valid"
+      type="submit"
+      class="btn btn-primary"
+      (click)="onLogin()"
+    >
+      {{ isLoginMode ? "Login" : "SignUp" }}
+    </button>
+    <hr />
+    <button type="button" class="btn btn-primary" (click)="switchMode()">
+      Switch to {{ isLoginMode ? "SignUp" : "Login" }}
+    </button>
+  </form>
+</div>
